@@ -50,7 +50,8 @@ def main():
         "/basics-graphics-music",
         "/MC_RISCV_MIREA"
     ]
-
+    
+    cwd = os.getcwd() 
     cnt = 0
     for raw_path in repo_paths:
         path = cwd + raw_path
