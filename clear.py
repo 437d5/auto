@@ -47,12 +47,13 @@ def git_reset_to_remote(repo_path):
 
 def main():
     repo_paths = [
-        "/home/user/Desktop/basics-graphics-music",
-        "/home/user/Desktop/MC_RISCV_MIREA"
+        "/basics-graphics-music",
+        "/MC_RISCV_MIREA"
     ]
 
     cnt = 0
-    for path in repo_paths:
+    for raw_path in repo_paths:
+        path = cwd + raw_path
         if not os.path.exists(path):
             print(f"folder not exist {path}")
             continue
